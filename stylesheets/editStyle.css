@@ -1,0 +1,37 @@
+img {
+	border: 1px solid black;
+
+	width: 20px;
+	height: 20px;
+}
+
+td {
+	border: 1px solid black;
+	border-spacing: 2px;
+	padding: 3px;
+}
+
+th {
+	text-decoration: underline;
+	font-size: larger;
+}
+
+div.styled {
+	width: 200px;
+	height: 70px;
+}
+form.styled1 {
+	float: left;
+}
+	
+form.styled2 {
+	
+}
+
+img.styled1 {
+	float: left;
+}
+	
+img.styled2 {
+	float: right;
+}

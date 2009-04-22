@@ -3,11 +3,11 @@
 <head></head>
 <body>
 <?php
-
+include_once("settings.php");
 
 function articleMoveUp($MenuId,$SeqNbr)
 {
-	$dbc = @mysqli_connect ('localhost', 'trcweb_attend', 'oreo23', 'trcweb') OR die ('Could not connect to MySQL: '.mysqli_connect_error());
+	$dbc = @mysqli_connect ($DBHOST, $DBUSER, $DBPASS, $DBNAME) OR die ('Could not connect to MySQL: '.mysqli_connect_error());
 
 	$q = "call spArticleMoveUp(".$MenuId.",".$SeqNbr.");";
 
@@ -18,7 +18,7 @@ function articleMoveUp($MenuId,$SeqNbr)
 }
 function articleMoveDown($MenuId,$SeqNbr)
 {
-	$dbc = @mysqli_connect ('localhost', 'trcweb_attend', 'oreo23', 'trcweb') OR die ('Could not connect to MySQL: '.mysqli_connect_error());
+	$dbc = @mysqli_connect ($DBHOST, $DBUSER, $DBPASS, $DBNAME) OR die ('Could not connect to MySQL: '.mysqli_connect_error());
 
 	$q = "call spArticleMoveDown(".$MenuId.",".$SeqNbr.");";
 
@@ -28,7 +28,7 @@ function articleMoveDown($MenuId,$SeqNbr)
 }
 function menuItemMoveUp($MenuId,$SeqNbr)
 {
-	$dbc = @mysqli_connect ('localhost', 'trcweb_attend', 'oreo23', 'trcweb') OR die ('Could not connect to MySQL: '.mysqli_connect_error());
+	$dbc = @mysqli_connect ($DBHOST, $DBUSER, $DBPASS, $DBNAME) OR die ('Could not connect to MySQL: '.mysqli_connect_error());
 
 	$q = "call spMenuItemMoveUp(".$MenuId.",".$SeqNbr.");";
 
@@ -38,7 +38,7 @@ function menuItemMoveUp($MenuId,$SeqNbr)
 }
 function menuItemMoveDown($MenuId,$SeqNbr)
 {
-	$dbc = @mysqli_connect ('localhost', 'trcweb_attend', 'oreo23', 'trcweb') OR die ('Could not connect to MySQL: '.mysqli_connect_error());
+	$dbc = @mysqli_connect ($DBHOST, $DBUSER, $DBPASS, $DBNAME) OR die ('Could not connect to MySQL: '.mysqli_connect_error());
 
 	$q = "call spMenuItemMoveDown(".$MenuId.",".$SeqNbr.");";
 
@@ -48,7 +48,7 @@ function menuItemMoveDown($MenuId,$SeqNbr)
 }
 function menuItemSave($MenuId)
 {
-	$dbc = @mysqli_connect ('localhost', 'trcweb_attend', 'oreo23', 'trcweb') OR die ('Could not connect to MySQL: '.mysqli_connect_error());
+	$dbc = @mysqli_connect ($DBHOST, $DBUSER, $DBPASS, $DBNAME) OR die ('Could not connect to MySQL: '.mysqli_connect_error());
 	
 	if (!isset($_POST['chkShowBackgroundInd']))
 	  $_showBackgroundInd = 0;
@@ -71,7 +71,7 @@ function menuItemSave($MenuId)
 }
 function articleSave($menuId)
 {
-	$dbc = @mysqli_connect ('localhost', 'trcweb_attend', 'oreo23', 'trcweb') OR die ('Could not connect to MySQL: '.mysqli_connect_error());
+	$dbc = @mysqli_connect ($DBHOST, $DBUSER, $DBPASS, $DBNAME) OR die ('Could not connect to MySQL: '.mysqli_connect_error());
 	
 	if (!isset($_POST['chkActiveInd']))
 	  $_chkActiveInd = 0;
@@ -90,7 +90,7 @@ function menuItemDelete($SeqNbr)
 }
 function articleDelete($menuId)
 {
-	$dbc = @mysqli_connect ('localhost', 'trcweb_attend', 'oreo23', 'trcweb') OR die ('Could not connect to MySQL: '.mysqli_connect_error());
+	$dbc = @mysqli_connect ($DBHOST, $DBUSER, $DBPASS, $DBNAME) OR die ('Could not connect to MySQL: '.mysqli_connect_error());
 
 	$q = "call spArticleDelete(".$_POST['articleId'].");";
 
@@ -104,7 +104,7 @@ function menuItemAdd($SeqNbr)
 }
 function articleAdd($MenuId,$loc)
 {
-	$dbc = @mysqli_connect ('localhost', 'trcweb_attend', 'oreo23', 'trcweb') OR die ('Could not connect to MySQL: '.mysqli_connect_error());
+	$dbc = @mysqli_connect ($DBHOST, $DBUSER, $DBPASS, $DBNAME) OR die ('Could not connect to MySQL: '.mysqli_connect_error());
 
 	$q = "call spArticleAdd(".$MenuId.",".$loc.");";
 

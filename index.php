@@ -1,5 +1,6 @@
 <?php session_start(); 
 include_once "browser_detection.php";
+include_once "settings.php";
 $currentPage = $_REQUEST[page];
 if(!$_REQUEST[page])
 {
@@ -12,7 +13,8 @@ if(!$_REQUEST[page])
 <head>
 	<title>BEAR METAL</title>
 	<?php
-		$dbc = @mysqli_connect ('localhost', 'trcweb_attend', 'oreo23', 'trcweb') OR die ('Could not connect to MySQL: '.mysqli_connect_error());
+		$dbc = @mysqli_connect ($DBHOST, $DBUSER, $DBPASS, $DBNAME) OR die ('Could not connect 
+to MySQL: '.mysqli_connect_error());
 		$q = "SELECT * FROM trcmenu where PageName = '".$currentPage."' order by SeqNbr";
 		$r = mysqli_query($dbc, $q);
 		$row = mysqli_fetch_array($r, MYSQLI_ASSOC);

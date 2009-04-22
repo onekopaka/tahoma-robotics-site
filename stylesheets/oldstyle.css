@@ -1,0 +1,81 @@
+body {
+	
+}
+
+div.a {
+	position: absolute;
+	height: 95px;
+	width: 880px;
+	border-right: solid 1px blue;
+	border-left: solid 1px blue;
+	border-bottom: solid 1px blue;
+	border-top:solid 1px blue;
+	/*background-image: url(../images/bghorizontal1.png);
+	background-repeat: repeat-x;*/
+}
+
+div.b {
+	position: absolute;
+	margin-top: 105px;
+	width: 150px;
+	border-top:solid 1px blue;
+	border-right: solid 1px blue;
+	border-left: solid 1px blue;
+	border-bottom: solid 1px blue;
+	padding: 5px;
+}
+
+div.b a {
+	text-decoration: none;
+	color: black;
+	
+	
+}
+
+div.b p {
+	border-top:solid 1px blue;
+	border-right: solid 1px blue;
+	border-left: solid 1px blue;
+	border-bottom: solid 1px blue;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 5px;
+	/*background-image: url(../images/TRC-Links.png);
+	background-repeat: no-repeat;*/
+}
+
+div.c {
+	position: absolute;
+	width: 550px;
+	border-top: solid 1px blue;
+	border-right: solid 1px blue;
+	border-left: solid 1px blue;
+	border-bottom: solid 1px blue;
+	margin-left: 165px;
+	margin-top: 105px;
+	padding: 5px;
+	
+	background-image: url(../images/TRC-Logo-Final.png);
+	background-repeat: repeat-y;
+}
+
+div.d {
+	position: absolute;
+	margin-left: 730px;
+	margin-top: 105px;
+	width: 150px;
+	border-right: solid 1px blue;
+	border-left: solid 1px blue;
+	border-bottom: solid 1px blue;
+	padding: 5px;
+}
+
+div.f {
+	position: absolute;
+	margin-top: 600px;
+	border-right: solid 1px blue;
+	border-left: solid 1px blue;
+	border-bottom: solid 1px blue;
+	height: 50px;
+}
+

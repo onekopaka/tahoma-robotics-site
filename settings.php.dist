@@ -1,0 +1,15 @@
+<?php
+// This is a settings file for the database
+
+// This generally stays as localhost
+$DBHOST = 'localhost';
+
+$DBUSER = 'dbuser';
+$DBPASS = 'dbpass';
+$DBNAME = 'dbname';
+
+// Editor Password, THIS IS AN MD5 HASH. NOT A PLAIN TEXT STRING.
+// you can use plain text with this:
+// $EDITORPASS = md5('plaintext');
+$EDITORPASS = md5('editor');
+?>

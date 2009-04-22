@@ -9,7 +9,7 @@ function displayArticleItems($menuId)
 	echo '<FORM class="styled2" METHOD="POST" ACTION="editProcess.php?function=articleAdd&menuId='.$menuId.'&loc=1"><INPUT TYPE="submit" VALUE="...to bottom"></FORM>';
 	echo '';
 	
-	$dbc = @mysqli_connect ('localhost', 'trcweb_attend', 'oreo23', 'trcweb') OR die ('Could not connect to MySQL: '.mysqli_connect_error());
+	$dbc = @mysqli_connect ($DBHOST, $DBUSER, $DBPASS, $DBNAME) OR die ('Could not connect to MySQL: '.mysqli_connect_error());
 	
 	$q=     "SELECT ArticleId, MenuId, SeqNbr, ArticleTitle, Body ";
     $q = $q."     , CASE WHEN IFNULL(ActiveInd, 0) = 0 THEN 'No' ELSE 'Yes' END ActiveInd ";

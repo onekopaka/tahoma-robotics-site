@@ -1,5 +1,6 @@
 <?php
 session_start();
+include_once("settings.php");
 
 function loginForm()
 {
@@ -27,12 +28,12 @@ function checkLogin()
 		echo '<p>You must enter a password.</p>';
 		$_SESSION['loggedIn'] = 'no';
 	}
-	if($_POST['userName'] != "editor" || md5($_POST['password']) != '81dc9bdb52d04dc20036dbd8313ed055')
+	if($_POST['userName'] != "editor" || md5($_POST['password']) != $EDITORPASS)
 	{
 		echo '<p>Incorrect login information. Please try again.</p>';
 		$_SESSION['loggedIn'] = 'no';
 	}
-	if($_POST['userName'] == "editor" && md5($_POST['password']) == '81dc9bdb52d04dc20036dbd8313ed055')
+	if($_POST['userName'] == "editor" && md5($_POST['password']) == $EDITORPASS)
 	{
 		$_SESSION['loggedIn'] = 'yes';
 	}

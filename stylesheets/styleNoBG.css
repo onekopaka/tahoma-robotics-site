@@ -1,0 +1,101 @@
+body {
+	background-color: #111;
+}
+
+#wholePage {
+	background-color: #111;
+	margin: auto;
+	width: 970px;
+	color: #333;
+	border: 3px solid #000;
+	line-height: 130%;
+	min-height: 100%;
+}
+
+#header {
+	background-color: #111;
+	height: 160px;
+	border-bottom: 3px solid #000;
+	background-repeat: repeat-x;
+}
+
+#navbar {
+	font-size: small;
+	font-weight: bold;
+	background-color: #111;
+	float: left;
+	width: 180px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#navbar a {
+	text-decoration: none;
+	color: white;
+}
+
+#navbar p {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 5px;
+	background-image: url(../images/bear_metal_button.png);
+	background-repeat: no-repeat;
+	color: #fff;
+	text-align: center;
+	-webkit-text-size-adjust: none;
+}
+
+#navbar p:hover {
+	background: url(../images/bear_metal_button_over.png);
+}
+
+#invisible {
+	float: left;
+	min-height: 100%;
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+#content {
+	font-size: small;
+	background-color: #111;
+	color: #fff;
+	float: left;
+	border-left: solid 3px #000;
+	border-right: solid 3px #000;
+	min-height: 480px;
+	width: 525px;
+	padding-right: 10px;
+	padding-left: 5px;
+}
+
+#content table {
+	font-size: small;
+	padding: 10px;
+}
+
+#content p {
+	#padding: 10px;
+}
+
+#content strong {
+	font-size: larger;
+}
+
+#calendar {
+	background-color: #fff;
+	float: right;
+	width: 230px;
+	margin: 0px;/
+	padding: 2px;
+}
+
+#footer {
+	font-size: small;
+	clear: both;
+	padding: 5px;
+	border-top: solid 3px #000;
+	height: 30px;
+	background-color: #111;
+}

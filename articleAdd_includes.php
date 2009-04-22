@@ -5,7 +5,7 @@ function displayArticleAdd($menuId)
 {
 	echo '<FORM METHOD="POST" ACTION="editMenu.php"><INPUT TYPE="submit" VALUE="<< Menu Items"></FORM>';
 	
-	$dbc = @mysqli_connect ('localhost', 'trcweb_attend', 'oreo23', 'trcweb') OR die ('Could not connect to MySQL: '.mysqli_connect_error());
+	$dbc = @mysqli_connect ($DBHOST, $DBUSER, $DBPASS, $DBNAME) OR die ('Could not connect to MySQL: '.mysqli_connect_error());
 	
 	$q = "SELECT * FROM trcarticle where MenuId = ".$menuId." order by SeqNbr";
 

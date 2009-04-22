@@ -6,7 +6,7 @@ function displayEditMenuItem()
 {
 	echo '<h3>Logged in successfully.</h3>';
 	
-	$dbc = @mysqli_connect ('localhost', 'trcweb_attend', 'oreo23', 'trcweb') OR die ('Could not connect to MySQL: '.mysqli_connect_error());
+	$dbc = @mysqli_connect ($DBHOST, $DBUSER, $DBPASS, $DBNAME) OR die ('Could not connect to MySQL: '.mysqli_connect_error());
 	
 	$q = "SELECT * FROM trcmenu where MenuId = ".$_REQUEST[menuId]."";
 
