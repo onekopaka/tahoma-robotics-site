@@ -1,5 +1,7 @@
 body {
 	background-color: #111;
+	background-image: url(../images/diamondplating.png);
+	background-repeat: repeat;
 }
 
 #wholePage {
@@ -10,6 +12,10 @@ body {
 	border: 3px solid #000;
 	line-height: 130%;
 	min-height: 100%;
+	background-image: url(../images/fencing.png);
+	background-repeat: repeat;
+	-moz-border-radius: 32px;
+	-webkit-border-radius: 32px;
 }
 
 #header {
@@ -17,6 +23,8 @@ body {
 	height: 160px;
 	border-bottom: 3px solid #000;
 	background-repeat: repeat-x;
+	background-image: url(../images/diamondplating.png);
+	background-repeat: repeat;
 }
 
 #navbar {
